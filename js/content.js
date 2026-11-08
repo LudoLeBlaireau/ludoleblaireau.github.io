@@ -133,7 +133,9 @@ const portfolioContent = {
                 "Agile"
             ],
 
-            cover: "assets/images/projects/vorace/cover.jpg",
+            
+            cover: "projets/images_voraces/cover-vorace.webp",
+
 
             thumbnail: "assets/images/projects/vorace/thumbnail.jpg",
 
@@ -201,14 +203,14 @@ const portfolioContent = {
 
             title: "Pouss'Plouf!",
 
-            subtitle: "Projet collectif",
+            subtitle: "Comande de la mairie",
 
             category: [
                 "team",
                 "production"
             ],
 
-            status: "Projet scolaire",
+            status: "Projet CVL",
 
             role: [
                 "Producer",
@@ -216,7 +218,7 @@ const portfolioContent = {
             ],
 
             description:
-                "Un jeu multijoueur mettant en scène des animaux arctiques sur une plateforme de glace, où les équipes doivent composer avec les dangers de l'environnement.",
+                "Pouss'Plouf ! est un party game dans lequel deux équipes de deux joueurs incarnent des animaux rebondissants qui s'affrontent dans des duels loufoques sur la banquise. Le but est simple : pousser le plus de fois possible l'équipe adverse dans les trous de la banquise !",
 
             shortDescription:
                 "Coordination de production et échanges avec les partenaires de la mairie.",
@@ -227,7 +229,7 @@ const portfolioContent = {
                 "Communication"
             ],
 
-            cover: "assets/images/projects/pouss-plouf/cover.jpg",
+            cover: "projets/images_pouss-plouf/cover-pouss-plouf.webp",
 
             thumbnail: "assets/images/projects/pouss-plouf/thumbnail.jpg",
 
@@ -243,17 +245,16 @@ const portfolioContent = {
 
             presentation: {
                 concept:
-                    "Pouss'Plouf! est un jeu multijoueur dans lequel quatre joueurs incarnent des animaux arctiques évoluant sur une plateforme de glace soumise à différents dangers.",
+                    "Pouss'Plouf! est un projet réalisé sur commande de la mairie de Montpellier dans le cadre de l’événement « Cœur de Ville en Lumières ».",
 
                 context:
-                    "Projet scolaire réalisé en équipe dans le cadre de la formation Game Design.",
-
+                    "\nProjeté sur une façade de 22 mètres sur 13, percée de fenêtres, le jeu devait intégrer l’architecture du bâtiment pour la mettre en valeur. L’événement étant ouvert à tous, il devait également être accessible à un large public.",
                 objectives:
-                    "Développer une expérience multijoueur accessible et dynamique, tout en assurant le suivi de la production et la coordination des différents intervenants.",
+                    "\nLe jeu repose sur deux principes : une seule manette partagée par équipe, qui invite les joueurs à communiquer et à se coordonner pour gagner, et un gameplay simple, permettant à tous les âges et à tous les niveaux de se retrouver pour s’amuser ensemble.",
+                team:
+                    "\n...",
 
-                team: "Projet collectif — composition de l'équipe à préciser.",
 
-                role: "Producer et coordinateur, notamment dans les échanges avec les interlocuteurs de la mairie."
             },
 
             timeline: [
