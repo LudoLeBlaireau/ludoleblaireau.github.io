@@ -107,7 +107,7 @@ const portfolioContent = {
 
             title: "Vorace",
 
-            subtitle: "Projet collectif",
+            subtitle: "Projet de fin d'étude",
 
             category: [
                 "team",
@@ -122,7 +122,8 @@ const portfolioContent = {
             ],
 
             description:
-                "Un projet de jeu vidéo collectif dans lequel j'interviens sur l'organisation de la production, la coordination de l'équipe et le suivi des tâches.",
+                "Vorace est un Twin Stick Shooter en noir et blanc qui plonge le joueur dans un univers sombre et brutal, où la vengeance devient le seul moteur de survie.",
+                
 
             shortDescription:
                 "Gestion de production, organisation du backlog et accompagnement de l'équipe.",
