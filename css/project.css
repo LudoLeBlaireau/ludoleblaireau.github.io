@@ -4,12 +4,12 @@
    ========================================================= */
 
 :root {
-    --pearl: #F2EBDD;
-    --blue: #244BBA;
-    --charcoal: #171717;
-    --light-blue: #A7B9E8;
-    --chrome: #BFC2C8;
-    --chrome-light: #E8E9EB;
+    --pearl: #F7F4ED;
+    --blue: #7B1E2B;
+    --charcoal: #151515;
+    --light-blue: #E8CDD0;
+    --chrome: #C9C1B5;
+    --chrome-light: #F0EBE3;
     --chrome-dark: #70747D;
     --grey: #686868;
     --font-main: "Space Grotesk", sans-serif;
@@ -805,7 +805,7 @@
 .project-status {
     border: 1px solid var(--blue);
     color: var(--blue);
-    background: rgba(36, 75, 186, .06);
+    background: rgba(123, 30, 43, .06);
 }
 .project-hero-visual {
     background: var(--light-blue);
@@ -840,4 +840,137 @@
     .contribution-card,
     .postmortem-card { transform: none; }
     .project-next-links a { transition: none; }
+}
+
+
+/* =========================================================
+   DA OR / ROUGE / NOIR / BLANC PERLE — FINITIONS
+   Les anciennes variables restent compatibles avec le HTML/JS.
+   ========================================================= */
+:root {
+    --pearl: #F7F4ED;
+    --charcoal: #151515;
+    --white: #FFFFFF;
+    --burgundy: #7B1E2B;
+    --burgundy-light: #E8CDD0;
+    --red: #A6262D;
+    --blue: var(--burgundy);
+    --light-blue: var(--burgundy-light);
+    --peach: var(--burgundy);
+    --dark-peach: var(--red);
+    --chrome: #C9C1B5;
+    --chrome-light: #F0EBE3;
+    --chrome-dark: #776F68;
+    --grey: #66615B;
+}
+
+/* Titres et cartes : accent rouge ponctuel, cadre doré */
+.project-hero h1 span { color: var(--red); }
+.project-section-heading h2 span { color: var(--burgundy); }
+.project-status { border-color: var(--red); color: var(--red); background: rgba(166,38,45,.06); }
+.project-hero-visual { border-color: var(--burgundy); background: var(--burgundy-light); }
+.project-next-links a {
+    background: var(--pearl);
+    color: var(--charcoal);
+    border: 2px solid var(--charcoal);
+    border-radius: 0;
+    box-shadow: 4px 4px 0 var(--charcoal);
+}
+.project-next-links a span, .project-next-links a strong { color: inherit; }
+.project-next-links a:hover {
+    background: var(--burgundy-light);
+    color: var(--charcoal);
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--charcoal);
+}
+
+
+/* ===== Progression verticale — étoiles dessinées à quatre pointes ===== */
+.reading-rail {
+  position: fixed;
+  z-index: 900;
+  left: clamp(12px, 2.3vw, 36px);
+  top: 50%;
+  transform: translateY(-50%);
+  height: min(62vh, 520px);
+  width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --rail-ink: #171717;
+  --rail-active: #7b1e2b;
+}
+.reading-rail-track {
+  position: absolute;
+  inset: 23px auto 23px 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: var(--rail-ink);
+  overflow: hidden;
+}
+.reading-rail-fill {
+  width: 100%;
+  height: 0;
+  background: var(--rail-active);
+  transition: height .12s linear;
+}
+.reading-rail-markers {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.reading-rail-star {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 48px;
+  color: var(--rail-ink);
+  text-decoration: none;
+  background: transparent;
+  transition: transform .2s ease, color .2s ease;
+}
+.reading-rail-spark {
+  display: block;
+  width: 37px;
+  height: 45px;
+  overflow: visible;
+  filter: drop-shadow(0 0 2px #f7f4ed);
+}
+.reading-rail-spark path {
+  fill: #f7f4ed;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  stroke-linejoin: round;
+  transition: fill .2s ease, stroke .2s ease;
+}
+.reading-rail-star:hover,
+.reading-rail-star.is-active {
+  color: var(--rail-active);
+  transform: scale(1.13);
+}
+.reading-rail-star:hover .reading-rail-spark path,
+.reading-rail-star.is-active .reading-rail-spark path {
+  fill: var(--rail-active);
+  stroke: var(--rail-active);
+}
+.reading-rail-star:focus-visible { outline: 2px solid var(--rail-active); outline-offset: 2px; }
+@media (max-width: 900px) {
+  .reading-rail { left: 5px; width: 36px; height: min(55vh, 390px); }
+  .reading-rail-star { width: 36px; height: 40px; }
+  .reading-rail-spark { width: 30px; height: 37px; }
+  .reading-rail-track { top: 20px; bottom: 20px; }
+}
+@media (max-width: 600px) {
+  .reading-rail { left: 1px; width: 30px; height: 44vh; }
+  .reading-rail-star { width: 30px; height: 34px; }
+  .reading-rail-spark { width: 25px; height: 31px; }
+  .reading-rail-track { top: 17px; bottom: 17px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reading-rail-fill, .reading-rail-star, .reading-rail-spark path { transition: none; }
 }

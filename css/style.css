@@ -9,25 +9,25 @@
    01 — VARIABLES
 ========================= */
 
-
 :root {
-  --pearl: #F2EBDD;
-  --blue: #244BBA;
-  --charcoal: #171717;
-  --light-blue: #A7B9E8;
-  --chrome: #BFC2C8;
-  --grey: #686868;
-  --light-grey: #BFC2C8;
-  --white: #ffffff;
-  --peach: #244BBA;
-  --dark-peach: #244BBA;
-  --font-main: "Space Grotesk", sans-serif;
-  --font-japanese: "Zen Kaku Gothic New", sans-serif;
-  --font-mono: "DM Mono", monospace;
-  --page-width: 1440px;
-  --page-padding: clamp(22px, 7vw, 110px);
-  --transition: 0.35s ease;
+    --pearl: #F7F4ED;
+    --charcoal: #151515;
+    --peach: #7B1E2B;
+    --white: #ffffff;
+    --grey: #777c76;
+    --light-grey: #deded7;
+    --dark-peach: #A6262D;
+
+    --font-main: "Space Grotesk", sans-serif;
+    --font-japanese: "Zen Kaku Gothic New", sans-serif;
+    --font-mono: "DM Mono", monospace;
+
+    --page-width: 1440px;
+    --page-padding: clamp(22px, 7vw, 110px);
+
+    --transition: 0.35s ease;
 }
+
 
 /* =========================
    02 — RESET & BASE
@@ -340,72 +340,46 @@ img {
 
 /* Boutons */
 
-.
-/* =========================================
-   BOUTONS — STYLE OFFICIEL
-========================================= */
-
 .button {
     display: inline-flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 22px;
+    justify-content: center;
+    gap: 20px;
 
-    padding: 15px 20px;
-
-    border: 2px solid #171717;
-    border-radius: 0;
-    box-shadow: 4px 4px 0 #171717;
+    padding: 15px 21px;
 
     font-family: var(--font-mono);
     font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    text-decoration: none;
+    letter-spacing: 0.3px;
 
-    cursor: pointer;
-    transition: all 0.2s ease;
+    transition:
+        transform var(--transition),
+        background var(--transition),
+        color var(--transition);
 }
-
-/* Bouton principal — Bleu cobalt */
-
-.button-primary {
-    background: #244BBA;
-    color: #F2EBDD;
-}
-
-/* Bouton secondaire — Beige papier */
-
-.button-secondary {
-    background: #F2EBDD;
-    color: #171717;
-}
-
-/* Effets au survol */
 
 .button:hover {
-    transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0 #171717;
+    transform: translateY(-4px);
+}
+
+.button-primary {
+    background: var(--charcoal);
+    color: var(--pearl);
 }
 
 .button-primary:hover {
-    background: #171717;
-    color: #F2EBDD;
+    background: var(--peach);
+    color: var(--charcoal);
+}
+
+.button-secondary {
+    border: 1px solid var(--charcoal);
 }
 
 .button-secondary:hover {
-    background: #A7B9E8;
-    color: #171717;
+    background: var(--peach);
+    border-color: var(--peach);
 }
-
-/* Effet au clic */
-
-.button:active {
-    transform: translate(4px, 4px);
-    box-shadow: none;
-}
-
 
 
 /* Composition graphique du hero */
@@ -966,7 +940,7 @@ img {
     align-items: center;
     background:
         radial-gradient(circle at 70% 30%, rgba(255, 167, 127, 0.35), transparent 35%),
-        linear-gradient(135deg, #303c34, #1f2923);
+        linear-gradient(135deg, #303c34, #151515);
     color: var(--pearl);
 }
 
@@ -1806,29 +1780,24 @@ img {
 ========================= */
 
 :root {
-    --pearl: #F2EBDD;
-    --charcoal: #171717;
-    --peach: #244BBA;
-    --dark-peach: #244BBA;
+    --pearl: #F7F4ED;
+    --charcoal: #151515;
+    --peach: #7B1E2B;
+    --dark-peach: #7B1E2B;
 
     --white: #FFFFFF;
     --grey: #777777;
     --light-grey: #D4D0C7;
 
-    --blue: #244BBA;
-    --light-blue: #A7B9E8;
-    --chrome: #BFC2C8;
-    --chrome-light: #E9EAEC;
-    --chrome-dark: #747A84;
+    --blue: #7B1E2B;
+    --light-blue: #E8CDD0;
+    --chrome: #C9C1B5;
+    --chrome-light: #F0EBE3;
+    --chrome-dark: #776F68;
 
     --font-main: "Space Grotesk", sans-serif;
     --font-japanese: "Zen Kaku Gothic New", sans-serif;
     --font-mono: "DM Mono", monospace;
-
-    /* Grille commune à toutes les pages */
-    --page-width: 1440px;
-    --page-padding: clamp(22px, 7vw, 110px);
-    --transition: 0.35s ease;
 }
 
 
@@ -1868,13 +1837,13 @@ a:focus-visible {
         linear-gradient(
             to right,
             transparent 49.8%,
-            rgba(36, 75, 186, 0.13) 50%,
+            rgba(123, 30, 43, 0.13) 50%,
             transparent 50.2%
         ),
         linear-gradient(
             to bottom,
             transparent 49.8%,
-            rgba(36, 75, 186, 0.08) 50%,
+            rgba(123, 30, 43, 0.08) 50%,
             transparent 50.2%
         );
     background-size: 80px 80px;
@@ -1886,9 +1855,9 @@ a:focus-visible {
 ========================= */
 
 .site-header {
-    background: rgba(242, 235, 221, 0.94);
+    background: rgba(247, 244, 237, 0.94);
     border-bottom: 2px solid var(--charcoal);
-    box-shadow: 0 4px 0 rgba(36, 75, 186, 0.12);
+    box-shadow: 0 4px 0 rgba(123, 30, 43, 0.12);
 }
 
 .header-logo span,
@@ -1938,7 +1907,7 @@ a:focus-visible {
 
 .availability-dot {
     background: var(--blue);
-    box-shadow: 0 0 0 4px rgba(36, 75, 186, 0.15);
+    box-shadow: 0 0 0 4px rgba(123, 30, 43, 0.15);
 }
 
 .hero h1 {
@@ -2022,7 +1991,7 @@ a:focus-visible {
 
 .art-main {
     background:
-        linear-gradient(135deg, #A7B9E8, #244BBA);
+        linear-gradient(135deg, #E8CDD0, #7B1E2B);
     border: 2px solid var(--charcoal);
 }
 
@@ -2122,7 +2091,7 @@ a:focus-visible {
 
 .portrait-placeholder {
     background:
-        linear-gradient(145deg, #DCE2F0, #A7B9E8);
+        linear-gradient(145deg, #F0DFE0, #E8CDD0);
     border: 1px solid var(--blue);
 }
 
@@ -2145,8 +2114,8 @@ a:focus-visible {
 
 .about-quote {
     border-left: 5px solid var(--blue);
-    background: rgba(36, 75, 186, 0.08);
-    box-shadow: 4px 4px 0 rgba(36, 75, 186, 0.12);
+    background: rgba(123, 30, 43, 0.08);
+    box-shadow: 4px 4px 0 rgba(123, 30, 43, 0.12);
 }
 
 .signature-stamp {
@@ -2161,7 +2130,7 @@ a:focus-visible {
 
 .skills {
     background:
-        linear-gradient(135deg, #171717, #222B43);
+        linear-gradient(135deg, #151515, #222B43);
     color: var(--white);
     border-top: 5px solid var(--blue);
     border-bottom: 5px solid var(--blue);
@@ -2177,18 +2146,18 @@ a:focus-visible {
 }
 
 .section-intro {
-    color: #D0D5E0;
+    color: #E1D2B8;
 }
 
 .skill-card {
-    border: 1px solid #65749C;
+    border: 1px solid #9B7135;
     background: rgba(255, 255, 255, 0.025);
-    box-shadow: 4px 4px 0 rgba(36, 75, 186, 0.3);
+    box-shadow: 4px 4px 0 rgba(123, 30, 43, 0.3);
 }
 
 .skill-card:hover {
     border-color: var(--light-blue);
-    background: rgba(36, 75, 186, 0.15);
+    background: rgba(123, 30, 43, 0.15);
     box-shadow: 6px 6px 0 var(--blue);
 }
 
@@ -2206,7 +2175,7 @@ a:focus-visible {
 }
 
 .skill-card p {
-    color: #D0D5E0;
+    color: #E1D2B8;
 }
 
 .skill-list li {
@@ -2218,7 +2187,7 @@ a:focus-visible {
 }
 
 .skill-tools span {
-    border-color: #65749C;
+    border-color: #9B7135;
     color: var(--light-blue);
 }
 
@@ -2273,7 +2242,7 @@ a:focus-visible {
 
 .project-visual-placeholder {
     background:
-        linear-gradient(135deg, #244BBA, #171717);
+        linear-gradient(135deg, #7B1E2B, #151515);
 }
 
 .project-visual-placeholder span {
@@ -2322,7 +2291,7 @@ a:focus-visible {
 
 .cv-section {
     background:
-        linear-gradient(120deg, #A7B9E8, #DCE2F0);
+        linear-gradient(120deg, #E8CDD0, #F0DFE0);
     border-top: 5px solid var(--blue);
     border-bottom: 5px solid var(--blue);
 }
@@ -2391,7 +2360,7 @@ a:focus-visible {
 }
 
 .contact-link:hover {
-    background: rgba(36, 75, 186, 0.05);
+    background: rgba(123, 30, 43, 0.05);
 }
 
 .contact-icon {
@@ -2440,25 +2409,25 @@ a:focus-visible {
 .chrome-effect {
     background: linear-gradient(
         135deg,
-        #747A84 0%,
+        #776F68 0%,
         #F5F5F5 18%,
-        #BFC2C8 35%,
+        #C9C1B5 35%,
         #FFFFFF 48%,
-        #858B96 65%,
-        #E9EAEC 82%,
-        #747A84 100%
+        #857A70 65%,
+        #F0EBE3 82%,
+        #776F68 100%
     );
     color: var(--charcoal);
-    border: 1px solid #747A84;
+    border: 1px solid #776F68;
 }
 
 .chrome-text {
     background: linear-gradient(
         180deg,
         #FFFFFF 0%,
-        #747A84 35%,
+        #776F68 35%,
         #FFFFFF 50%,
-        #8C929C 75%,
+        #857A70 75%,
         #FFFFFF 100%
     );
     background-clip: text;
@@ -2469,8 +2438,8 @@ a:focus-visible {
 
 .blue-glow {
     box-shadow:
-        0 0 8px rgba(36, 75, 186, 0.4),
-        0 0 20px rgba(36, 75, 186, 0.2);
+        0 0 8px rgba(123, 30, 43, 0.4),
+        0 0 20px rgba(123, 30, 43, 0.2);
 }
 
 
@@ -2520,4 +2489,165 @@ a:focus-visible {
     .cv-document {
         box-shadow: 7px 7px 0 var(--blue);
     }
+}
+
+
+/* =========================================================
+   DA OR / ROUGE / NOIR / BLANC PERLE — FINITIONS
+   Les anciennes variables restent compatibles avec le HTML/JS.
+   ========================================================= */
+:root {
+    --pearl: #F7F4ED;
+    --charcoal: #151515;
+    --white: #FFFFFF;
+    --burgundy: #7B1E2B;
+    --burgundy-light: #E8CDD0;
+    --red: #A6262D;
+    --blue: var(--burgundy);
+    --light-blue: var(--burgundy-light);
+    --peach: var(--burgundy);
+    --dark-peach: var(--red);
+    --chrome: #C9C1B5;
+    --chrome-light: #F0EBE3;
+    --chrome-dark: #776F68;
+    --grey: #66615B;
+}
+
+/* Accents rouges, or et contraste des zones sombres */
+.hero h1 span { color: var(--burgundy); text-shadow: 4px 4px 0 var(--charcoal); }
+.title-dot, .section-heading .accent { color: var(--red) !important; }
+.availability-dot { background: var(--red); box-shadow: 0 0 0 4px rgba(166,38,45,.13); }
+.main-nav .nav-contact, .button-primary { background: var(--red); color: var(--white); }
+.main-nav .nav-contact:hover, .button-primary:hover { background: var(--charcoal); color: var(--white); }
+.button-secondary:hover { background: var(--burgundy-light); color: var(--charcoal); }
+::selection { background: var(--burgundy); color: var(--charcoal); }
+
+
+/* =========================================
+   COMPÉTENCES — DÉGRADÉ ROUGE SOMBRE
+========================================= */
+
+.skills {
+    background: linear-gradient(
+        125deg,
+        #151515 0%,
+        #1D171A 30%,
+        #32171E 65%,
+        #571C29 100%
+    );
+}
+
+/* Cartes de compétences */
+
+.skill-card {
+    background: linear-gradient(
+        145deg,
+        #1C1C1E 0%,
+        #292026 100%
+    );
+
+    border: 1px solid #7B1E2B;
+    box-shadow: 4px 4px 0 #571C29;
+}
+
+/* Bordures et accents */
+
+.skill-card:hover {
+    border-color: #A6262D;
+    box-shadow: 6px 6px 0 #7B1E2B;
+}
+
+.skill-card .skill-symbol {
+    color: #B94A55;
+}
+
+
+/* ===== Progression verticale — étoiles dessinées à quatre pointes ===== */
+.reading-rail {
+  position: fixed;
+  z-index: 900;
+  left: clamp(12px, 2.3vw, 36px);
+  top: 50%;
+  transform: translateY(-50%);
+  height: min(62vh, 520px);
+  width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --rail-ink: #171717;
+  --rail-active: #7b1e2b;
+}
+.reading-rail-track {
+  position: absolute;
+  inset: 23px auto 23px 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: var(--rail-ink);
+  overflow: hidden;
+}
+.reading-rail-fill {
+  width: 100%;
+  height: 0;
+  background: var(--rail-active);
+  transition: height .12s linear;
+}
+.reading-rail-markers {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.reading-rail-star {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 48px;
+  color: var(--rail-ink);
+  text-decoration: none;
+  background: transparent;
+  transition: transform .2s ease, color .2s ease;
+}
+.reading-rail-spark {
+  display: block;
+  width: 37px;
+  height: 45px;
+  overflow: visible;
+  filter: drop-shadow(0 0 2px #f7f4ed);
+}
+.reading-rail-spark path {
+  fill: #f7f4ed;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  stroke-linejoin: round;
+  transition: fill .2s ease, stroke .2s ease;
+}
+.reading-rail-star:hover,
+.reading-rail-star.is-active {
+  color: var(--rail-active);
+  transform: scale(1.13);
+}
+.reading-rail-star:hover .reading-rail-spark path,
+.reading-rail-star.is-active .reading-rail-spark path {
+  fill: var(--rail-active);
+  stroke: var(--rail-active);
+}
+.reading-rail-star:focus-visible { outline: 2px solid var(--rail-active); outline-offset: 2px; }
+@media (max-width: 900px) {
+  .reading-rail { left: 5px; width: 36px; height: min(55vh, 390px); }
+  .reading-rail-star { width: 36px; height: 40px; }
+  .reading-rail-spark { width: 30px; height: 37px; }
+  .reading-rail-track { top: 20px; bottom: 20px; }
+}
+@media (max-width: 600px) {
+  .reading-rail { left: 1px; width: 30px; height: 44vh; }
+  .reading-rail-star { width: 30px; height: 34px; }
+  .reading-rail-spark { width: 25px; height: 31px; }
+  .reading-rail-track { top: 17px; bottom: 17px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reading-rail-fill, .reading-rail-star, .reading-rail-spark path { transition: none; }
 }
