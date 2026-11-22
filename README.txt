@@ -1,1 +1,0 @@
-Ouvrir index.html. Les pages projets sont dans projets/. Ne pas deplacer les fichiers CSS : css/style.css et css/project.css doivent rester dans css/. Conserver ou copier votre dossier assets/ a la racine. Les chemins ../css/project.css des pages projets sont essentiels.
